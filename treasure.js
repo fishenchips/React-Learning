@@ -20,7 +20,7 @@ class TreasureButton extends React.Component {
         return React.createElement(
             "div",    //what element to create
             null,   // no function
-            React.CreateElement(   //Create new element inside div
+            React.createElement(   //Create new element inside div
                 "button",
                 {onClick: () => this.setState({ opened: true })},    //by pressing the button state changes to true
                 "Press the button for a secret Treasure.."
@@ -29,3 +29,9 @@ class TreasureButton extends React.Component {
     }
 }
 
+
+//connect to html page
+ReactDOM.render(
+    React.createElement(TreasureButton),
+    document.querySelector("#hidden-treasure")
+)
