@@ -1,12 +1,14 @@
 import React, {useState} from 'react'
+import BtnLogIn from './BtnLogIn'
+import BtnLogOut from './BtnLogOut'
 
 function Login() {
   //variable for login, to to able to change its state. Conditional rendering. Initial value = not loggedIn
   const [isLoggedIn, setIsLoggedIn] = useState(false)
 
   //create initial state for button
-  let button = ""
-  let greeting = ""
+/*    let button = ""
+ */  let greeting = "" 
 
   //create function for loggin on, changing state to true
   const handleLogin = () => setIsLoggedIn(true)
@@ -15,19 +17,22 @@ function Login() {
   const handleLogOut = () => setIsLoggedIn(false)
 
 // if user is logged in, show log out btn and greet the user, else show log in btn and show stranger greeting
-if (isLoggedIn) {
+/* if (isLoggedIn) {
     button = <button onClick={handleLogOut}>Log Out</button>
     greeting = <h3>Welcome back, Philip! </h3>
 } else { 
     button = <button onClick={handleLogin}>Log In</button>
     greeting = <h3>Welcome, please log in or create an account. </h3>
 
-}
+} */
 
 
     return (
     <div> 
-        {button}
+        {(isLoggedIn)
+            ? <BtnLogOut handleLogOut={handleLogOut} />
+            : <BtnLogIn handleLogin={handleLogin} />
+        }
         {greeting}
     </div>
   )
