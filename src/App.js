@@ -11,13 +11,13 @@ function App() {
   return (
    <div className='App'>
       {/* Importing from JsxTest */}
-      <JsxTest />
+      {/* <JsxTest />
       <Header />
       <div className="wrapper">
           <Main />
           <Aside />
       </div>
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
