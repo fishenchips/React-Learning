@@ -5,6 +5,7 @@ import Header from './components/Webstructure/Header';
 import Main from './components/Webstructure/Main';
 import Aside from './components/Webstructure/Aside';
 import Footer from './components/Webstructure/Footer';
+import Login from './components/Login/Login';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Aside />
       </div>
       <Footer /> */}
+      <Login />
     </div>
   );
 }
